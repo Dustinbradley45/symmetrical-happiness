@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R.Capilli - Products</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+<body>
+    <!---CART MODAL---->
+    <div class="cart_container hiddenClass">
+        <ul class='cart_wrapper'>
+            <div class="cart_content">
+                <li><i class="fas fa-times exitCart" aria-label='Exit Cart'></i></li>
+ 
+                <!-- li items from JS go here  -->
+                <!-- <li><i class="fas fa-times exitCart"  aria-label='Exit Cart'></i></li> -->
+            </div>
+        </ul>
+    </div>
+
+
+
+        <!-- NAV MENU -->
+        <section class="navigation">
+            <input type="checkbox" class="nav-checkbox" id="nav-toggle">
+            <label for="nav-toggle" class="nav-button">
+                <span class="nav-icon" alt="Menu">&nbsp;</span>
+            </label>
+            <div class="nav-background">&nbsp;</div>
+            <nav class="nav-content">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Our Vision</a></li>
+                    <li class="nav-item"><a href="./products.html" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+                </ul>
+                <div class="social-nav">
+                    <ul class="social-links">
+                        <li><i class="fab fa-facebook" aria-label="Facebook Icon"><a href="#"></a></i></li>
+                        <li><i class="fab fa-instagram" aria-label="Instagram Icon"><a href="#"></a></i></li>
+                        <li><i class="fab fa-twitter-square" aria-label="Twitter Icon"><a href="#"></a></i></li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+        
+        
+        
+        <!-- HEADER START -->
+        <header class="wrapper">
+            <div class="main-header wrapper">
+                <h1 id="test">R.Capilli</h1>
+                <div class="cart">
+                    <a href="#" class='cartLink'>Cart (<span class="num">0</span>)</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN START -->
+        <main class='aboutMain'>
+            <div class="featuredProductsContainer">
+                <h2 class="products"> Featured Products</h2>
+                <div class="productBody wrapper">
+                    
+                    <!-- li items from JS go here  -->
+                </div>
+            </div>
+        </main>
+
+
+        <!----FOOTER START-->
+        <footer class= " about_footer">
+            <div class="footer_gutter">
+                <div class="footer-links">
+                    <ul>
+                        <div class="left-footer">
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Store Policy</a></li>
+                            <li><a href="#">Payment Methods</a></li>
+                        </div>
+                        <div class="right-footer">
+                            <li><a href="#">Shipping & Returns</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="footer-form">
+                    <form action="POST" class="footerForm">
+                        <label for="email"></label>
+                        <input type="email" placeholder="e-mail" id="email">
+                        <label for="submit"></label>
+                        <input type="submit" value="subscribe now" id="submit">
+                    </form>
+                </div>
+            </div>
+            <div class="footer_bottom wrapper">
+                <div class="footer-copyright">
+                    <p>&copy 2018 - Created by Dustin Bradley</p>
+                </div>
+                <div class="footer-social">
+                    <ul class="social-links">
+                        <li><i class="fab fa-facebook" aria-label="Facebook Icon"><a href="#"></a></i></li>
+                        <li><i class="fab fa-instagram"><a href="#" aria-label='instagram Icon'></a></i></li>
+                        <li><i class="fab fa-twitter-square"><a href="#" aria-label='twitter icon'></a></i></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        let numOfItems = 0;
+        const itemsInCart = [];
+        const productBox = [
+            {
+                id: 1,
+                image: '<img src="./styles/assets/slider1.jpeg" alt="Female standing with rounded pink purse"></img>',
+                description: 'Pink Handbag',
+                price: '$49.99',
+                addToCart: 'Add to Cart'
+            },
+            {
+                id: 2,
+                image: '<img src="./styles/assets/slider2.jpeg"  alt="Woman sitting on cement berrier with crossed legs wearing jeans with rips"></img>',
+                description: 'Pre-ripped Jeans',
+                price: '$99.99',
+                addToCart: 'Add to Cart'
+            },
+            {
+                id: 3,
+                image: '<img src="./styles/assets/slider3.jpeg"  alt="table with varous products on it including a leather purse, a watch, a scarf, a camera and a pair of boots"></img>',
+                description: 'Baby-blue Scarf',
+                price: '$36.99',
+                addToCart: 'Add to Cart'
+            },
+            {
+                id: 4,
+                image: '<img src="./styles/assets/slider4.jpeg"  alt="woman in blush pink blouse with watch on"></img>',
+                description: 'Leather Jacket',
+                price: '$249.99',
+                addToCart: 'Add to Cart'
+            },
+            {
+                id: 5,
+                image: '<img src="./styles/assets/slider5.jpeg"  alt="Two pairs of jeans on wood cloths-hangers hanging from wall"></img>',
+                description: 'Pre-washed Denim',
+                price: '$99.99',
+                addToCart: 'Add to Cart'
+            },
+            {
+                id: 6,
+                image: '<img src="./styles/assets/slider6.jpeg" alt="a white polka-dot shirt, green bottle of juice and an open book displayed on a bed"></img>',
+                description: 'Polka-dot Button-up',
+                price: '$79.99',
+                addToCart: 'Add to Cart'
+            },
+        ]
+
+        //create for loop to load each li element 
+        $(document).ready(function () {
+            $('.num').text(numOfItems);
+
+            for (let i = 0; i < productBox.length; i++) {
+            //Add text to HTML
+                $('.productBody').append(`
+                    <div class='productContainer' id="${productBox[i].id}">
+                        <li>${productBox[i].image}</li>     
+                        <li>${productBox[i].description}</li> 
+                        <li>${productBox[i].price}</li> 
+                        <li class='addToCartButton'><a href='#'class='clickMe'>+ ${productBox[i].addToCart}</a></li>
+                        
+                    </div>
+                `);
+            //on Click 
+                //What I need it to do: When 'a' tag "add to cart" is clicked, The values from the particular array need to be saved and used in a pop up modal.
+            }
+
+            $('.clickMe').on('click', function () {
+                // from the element I've clicked on (<a>) find my the closest element with the class of .productContainer and get me the id of that element
+                const idOfElement = $(this).closest('.productContainer').attr('id');
+                // because the id of the elment is a string I need to turn it into a number so I can match it to the id of the product in my productBox array
+                const idOfProduct = parseInt(idOfElement);
+
+                // using .find() I will one-by-one search through the productBox array and find the first object where the id matches the id of the element I've chosen, I only need the first because all the Id are unique
+                const product = productBox.find(product => product.id === idOfProduct);
+               
+
+                // before I increase the number of items in the cart or push the product object into the itemsInCart array I want to make sure the product object doesn't already exist in the itemsInCart array.  
+
+                // I want to map over all the items in the itemsInCart array and create a new array of just the ids of the products in the itemsInCart array
+                const idOfItemsInCart = itemsInCart.map(product => product.id);
+               
+                
+                // IF the idOfItemsInCart array includes() [already contains] the id of the product I've selected, alert the user they've already chosen this item
+                // ELSE push the object of the product into the itemsInCart array AND increase the number of items in the cart by 1
+                
+                const productIndex = itemsInCart.indexOf(product);
+                if(idOfItemsInCart.includes(idOfProduct)) {
+                    
+                } else {
+                    $('.cart_content').append(`
+                        <div class='contentWrapper'>
+                            <div ='modalImg'>
+                                <li class='cartValue cartImg'>${product.image}</li>
+                            </div>
+                            <div class='modalRight'>
+                                <li class='cartValue cartDesc'>${product.description}</li>
+                                 <li class='cartValue cartPrice'>${product.price}</li>
+                                <li class='quantityLine'><p>Quanitity</p><input type="number" name="quantity" min="1" max="10"></li>
+                                <li><button class='removeFromCart'>Remove</button></li>
+                             </div>
+                         </div>
+                     `)
+                    
+                    //Pushing product to array
+                    itemsInCart.push(product);  
+
+                    //Update Cart counter
+                    numOfItems = numOfItems + 1;
+                    $('.num').text(numOfItems);
+            
+                    //Remove hiddenClass to make the modal pop up
+                    $('.cart_container').removeClass('hiddenClass');
+                }; 
+
+
+                    $('.exitCart').on('click', function () {
+                        $('.cart_container').addClass('hiddenClass');
+                    })
+
+                    $('.cartLink').on('click', function(){
+                         $('.cart_container').toggleClass('hiddenClass');
+                    });
+
+                    
+            //When user clicks remove button 
+             $('.removeFromCart').on('click', function() {
+
+                
+                numOfItems = numOfItems - 1;
+                $('.num').text(numOfItems);
+
+                //if itemsInCart array has a .length index value run this script
+                    if(itemsInCart.length !== ' ') {
+                        
+                        //remove object item from array
+                            itemsInCart.splice(productIndex, 1);
+
+                            //Empty out all text of the parent element
+                            $('.cart_content').empty();
+                        console.log(itemsInCart)
+                            //Run this to loop through array and re append values into the cart 
+                            itemsInCart.forEach(product => {
+                                $('.cart_content').append(`
+                                <div class='contentWrapper'>
+                                   <li><i class="fas fa-times exitCart"  aria-label='Exit Cart'></i></li>
+                                    <div ='modalImg'>
+                                        <li class='cartValue cartImg'>${product.image}</li>
+                                        </div>
+                                        <div class='modalRight'>
+                                        <li class='cartValue cartDesc'>${product.description}</li>
+                                        <li class='cartValue cartPrice'>${product.price}</li>
+                                        <li class='quantityLine'><p>Quanitity</p><input type="number" name="quantity" min="1" max="10"></li>
+                                        </div>
+                                    </div>`)   
+                               
+                                    if(itemsInCart.length === ''){
+                                        
+                                        $('.cart_content').addClass('hiddenClass');
+                                    }
+                                });
+                              
+                //NOTE: Ran into issue with this and it is something to do with the loop. If there are two items in the 'cart', and you remove the first one added it will remove both and leave the empty modal. Can only ever use the 'remove' box to remove one item. 
+                    }});
+                });
+            
+            });
+         </script>
+     </body>
+ </html>

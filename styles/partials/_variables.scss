@@ -1,0 +1,41 @@
+// Variables
+$primaryColor: rgba(218,255,231,1);
+$secondaryColor:rgb(189, 137, 113);
+
+// linear-gradient (to top right, rgb(189, 137, 113) 80%, rgb(218,255,231,) 20%;
+
+$color-grey-dark-1: #777;
+$color-grey-dark-2:#333;
+
+
+
+
+// FONT
+$primaryFont:'Playfair Display', serif;
+$secondaryFont:'Raleway', sans-serif;
+$default-font-size: 1.6rem;
+
+
+// Mixins
+@mixin fontSize($fontSize) {
+    font-size: $fontSize;
+}
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content };    //600px
+    }
+    @if $breakpoint == tab {
+        @media only screen and (max-width: 56.25em) { @content };     //900px
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) { @content };    //1200px
+    }}
+    
+
+
+
+
+
+
+
+

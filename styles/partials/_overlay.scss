@@ -1,0 +1,190 @@
+.overlay_content-cell {
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+	display:none;
+	background-image: linear-gradient(to top right, rgba(255,255,255,.4) 0%, rgba($secondaryColor, .4) 40%, rgba(255,255,255,.2) 100%);
+	margin:10px;
+
+}
+
+.overlay_container-cell {
+	display:block;
+	position:relative;
+}
+
+.overlay_container-cell:hover .overlay_content-cell {
+display:block;
+}
+
+.flex-box {
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+	margin:0 auto;
+	margin-top:40%;
+
+	i, p {
+		padding:3px;
+		@include fontSize(2.5em);
+
+		i{
+			@include fontSize(1em);
+		}
+	}
+
+		.fa-heart{
+			padding-left:20px;
+		}
+
+		.fa-heart:hover, .fa-comment:hover {
+				color:$color-grey-dark-1;
+		}
+
+}
+
+
+
+
+.header_info {
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	margin:0 auto;
+	color: $color-grey-dark-2;
+	font-family:$primaryFont;
+	width:100%;
+
+	.header_words{
+	background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(250,250,250,1) 30%, rgba(119,119,119,1) 100%);
+	background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(250,250,250,1) 30%, rgba(119,119,119,1) 100%);
+	background: linear-gradient(to top right, rgba(255,255,255,.4) 0%, rgba(250,250,250,.5) 50%, rgba(119,119,119,.2) 100%);
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	padding:50px;
+	text-align: center;
+	position:relative;
+
+
+
+
+		@include respond(tab) {
+			width:83%;
+			padding:20px;
+			bottom:18%;
+			margin-top:20%;
+		}
+
+		@include respond(phone) {
+			width:100%;
+			padding:45px;
+			bottom:28%;
+			margin-top:11%;
+
+
+		}
+
+		@media only screen and (min-height:500px) and (max-height:700px){
+			bottom:17%;
+		}
+
+		@media only screen and (max-height:499px){
+			bottom:13%;
+			margin-top:19%;
+		}
+	}
+
+
+
+    
+	h3, h4 {
+		@include fontSize(4em);
+		letter-spacing:2.5px;
+		line-height:1.5;
+		padding:0;
+		margin:0;
+		line-height:1.6;
+		font-weight: 300;
+		position:relative;
+		margin:0 auto;
+	}
+
+	h3 {
+		@include respond(tab){
+			@include fontSize(3.3em);
+		}
+
+		@include respond(phone){
+			@include fontSize(2.4em)
+		}
+	}
+
+	h4{
+		@include fontSize(5em);
+
+		@include respond(tab){
+			@include fontSize(4.3em);
+		}
+
+		@include respond(phone){
+			@include fontSize(3.0em);
+		}
+	}
+
+	a{
+		font-family:$secondaryFont;
+		text-decoration: none;
+		letter-spacing: 2.5px;
+		color: $color-grey-dark-2;
+		@include fontSize(2.8em);
+		margin-top: 20px;
+		padding:5px;
+
+		&:hover {
+			color:$color-grey-dark-1;
+			font-weight:300;
+		}
+
+		@include respond(tab) {
+			@include fontSize(2.4em);
+		}
+
+		@include respond(phone) {
+			@include fontSize(2.2em);
+			margin-top:2px;
+
+		}
+	}
+
+}
+
+.header-content img{
+				position:relative; 
+				margin-top:6%;
+
+				@include respond(tab) {
+					margin-top:9%;
+				}
+
+				@include respond(phone) {
+					margin-top:14%;
+				}
+			}
+
+
+

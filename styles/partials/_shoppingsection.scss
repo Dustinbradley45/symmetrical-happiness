@@ -1,0 +1,126 @@
+.shop_categories {
+	// padding: 20px;
+	display: flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+	background-image: linear-gradient(to top right, rgba(189, 137, 113,.2) 80%, rgb(218,255,231) 20%);
+	background-attachment: fixed;
+	width:75%;
+
+	@include respond(tab-land) {			//1200px
+				max-width:78%;
+
+
+			}
+	 @include respond(tab) {				//900px
+			max-width:83%;
+        }
+	@include respond(phone) {
+			max-width:89%;
+			display:flex;
+			flex-direction:column;
+			justify-content:flex-start;
+			align-items:center;
+	}
+	
+
+	&-contents {
+		position: relative;
+		float: left;
+		margin: 30px;
+		display:flex;
+		flex-direction:row;
+		justify-content:space-evenly;
+		align-items:center;
+		width: 50%;
+
+
+			@include respond(phone) {
+					width:100%;
+					margin:15px;
+			}
+	
+		img {
+			display: flex;
+			flex-direction:column;
+			align-items:center;
+			justify-content:center;
+			width:100%;
+
+				 @include respond(tab) {				//900px
+						width:100%;
+			        }
+				@include respond(phone) {
+						max-width:85%;
+						display:flex;
+						flex-direction:column;
+						justify-content:flex-start;
+						align-items:center;
+				}
+		}
+
+
+		a{
+			display:flex;
+			flex-direction:column;
+			justify-content: flex-end;	
+			align-items:center;
+			position:absolute;
+			bottom:35%;
+			background-color:rgba(247,247,247,.9);
+			color:$color-grey-dark-2;
+			padding: 15px 30px;
+			text-decoration: none;
+			@include fontSize(1.8rem);
+			font-family: $secondaryFont;
+			box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+			transition: padding .5s;
+
+			&:hover {
+				color:$color-grey-dark-1;
+				padding:22px 37px;
+				
+			}
+
+			&:active {
+				box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, .8);
+			}
+
+			@include respond(tab-land) {
+				padding:10px 25px;
+			}
+		
+		}
+	}
+}
+.products{
+
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-start;
+	align-items:center;
+	margin: 3em 0 2.5em 0;
+	font-weight: 300;
+
+
+
+a{
+			text-decoration: none;
+			font-family:$primaryFont;
+			margin-bottom:5%;
+			color:$color-grey-dark-2;
+			padding:3% 0 20px 0;
+			font-weight:300;
+			@include fontSize(1em);
+			border-bottom:$secondaryColor solid 1px;
+
+
+
+			&:hover {
+				color:$color-grey-dark-1;	
+			}
+
+			
+		}
+	}

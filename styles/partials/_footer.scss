@@ -1,0 +1,224 @@
+footer {
+	background-color:rgb(75, 76, 79);
+	position: relative;
+	width:100%;
+
+
+	.footer-links{
+		position: relative;
+		width:100%;
+		margin: 0 auto;
+		padding: 30px 0 20px 0;
+
+		ul {
+			display:flex;
+			flex-direction:row;
+			justify-content:center;
+			align-items:center;
+			padding:0;
+
+			@include respond(phone) {
+			
+				display:flex;
+			}
+
+			li{
+				list-style:none;
+				padding: 20px;
+				@include fontSize(1.5em);
+				font-family:$secondaryFont;
+				font-weight: 300;
+				text-align: center;
+
+				@include respond(phone) {
+					@include fontSize(1.2em);
+					padding:10px 0 10px 0;
+					width:100%;
+					text-align:center;
+				}
+
+				a{
+					text-decoration: none;
+					color:white;
+					letter-spacing: 1.5px;
+
+
+					&:hover {
+						color:$secondaryColor;
+
+					}
+				}
+			}
+		}
+	}
+
+
+.left-footer, .right-footer {
+
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+
+	@include respond(phone){
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	width:50%;
+
+}
+}
+
+
+
+	form {
+		display:flex;
+		flex-direction:row;
+		justify-content:center;
+		align-items:center;
+		margin-bottom:30px;
+		    // width: 20%;
+            // height: 20%;
+
+
+		 @include respond(phone) {
+			display:flex;
+			flex-direction: column;
+			justify-content:center;
+			align-items:center;
+
+		}
+		input[type="email"] {
+			padding: 13px;
+			width: 17%;
+			margin-right: 20px;
+			line-height: 1;
+			background-color: $color-grey-dark-1;
+		
+
+
+			&::placeholder {
+				font-family:$primaryFont;
+				@include fontSize(1.2em);
+				text-transform: uppercase;
+				color:white;
+				letter-spacing:1.4px;
+
+			}
+			
+			&:hover {
+				background-color:$color-grey-dark-2;	
+			}
+
+			 @include respond(tab-land){
+			 	width:25%;
+			 }
+
+			 @include respond(tab) {
+			 	width:33%;
+			 }
+
+			 @include respond(phone) {
+				width:50%;
+				margin-bottom:10px;
+				margin-right:0;
+			 }
+
+		}
+		input[type='submit']{
+			background:#fafafa;
+			border:none;
+			color:black;
+			@include fontSize(1.5em);
+			padding:13px;
+			line-height: 1;
+			font-family:$primaryFont;
+			letter-spacing:1.4px;
+			width:17%;
+
+
+		&:hover {
+			background-color:$color-grey-dark-1;
+			color:#F7F7F7;
+		}
+
+			@include respond(phone) {
+				width: 50%;
+			}
+		}
+	}
+
+
+.footer_bottom{
+	width:100%;
+	border-top:1px solid $secondaryColor;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:center;
+
+		
+		@include respond(phone) {
+			display:flex;
+			flex-direction:column-reverse;
+			justify-content:center;
+			align-items:center;
+			}
+}
+	.footer-social {
+
+		ul{
+			list-style:none;
+			display: flex;
+			flex-direction:row;
+			justify-content:center;
+			align-items:center;
+			padding:0;
+			margin-right:10px;
+
+
+			li{
+				padding:20px;
+				@include fontSize(2.5em);
+				color:$primaryColor;
+
+
+
+				&:hover {
+					color:$color-grey-dark-2;
+				}
+
+				.fa-facebook{
+					padding-left:none;
+				}
+			}
+		}
+	}
+	.footer-copyright {
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		margin-left:10px;
+		
+		p{
+		@include fontSize(1.2em);
+		color:$primaryColor;
+		margin:0;
+		font-family:$primaryFont;
+			
+		@include respond(phone) {			//600px
+					
+					margin-bottom:10px;
+		        }
+		}
+	}	
+
+
+
+	}
+
+.about_footer{
+	margin-top:12%;
+}

@@ -1,0 +1,16 @@
+@-webkit-keyframes fade {
+	from {opacity: .4}
+	to {opacity:1}
+}
+
+@keyframes fade {
+	from {opacity:.4}
+	to {opacity:1}
+}
+
+@keyframes slideDown {
+	from {top: 0}
+	to {top:200px}
+}
+
+

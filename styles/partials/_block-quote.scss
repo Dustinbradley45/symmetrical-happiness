@@ -1,0 +1,58 @@
+.shop_now {
+	@include fontSize(2em);
+
+	.shop_now-Background {
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		position:relative;
+		background-color: #f7f7f7;
+		margin:4em 0 4em 0;
+		letter-spacing: 1.3px;
+		line-height: 1.4;
+
+		@include respond(tab) {
+			margin:4em 0 2.5em 0;
+        }
+
+        	@include respond(phone) {
+			margin:4em 0 2.5em 0;
+        }
+		
+		
+		p {
+			margin-top: 1%;
+			max-width: 60%;
+			font-family:$secondaryFont;
+			font-weight:300;
+			text-align: center;
+			border-bottom: 1px solid $secondaryColor;
+			padding-bottom:3%;
+
+			 @include respond(tab) {
+			max-width:75%;
+        }
+
+        	@include respond(phone) {
+			max-width:85%;
+        }
+
+
+		&::before {
+			content: '“';
+		}
+
+		&::after {
+			content:'”';
+		}
+		
+		
+	}
+
+	h3{
+		align-self:flex-start;
+		margin-left:20%;
+	}
+}
+}

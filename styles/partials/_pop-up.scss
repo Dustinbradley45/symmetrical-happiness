@@ -1,0 +1,156 @@
+
+  .popup_form {
+            display:flex;
+            flex-direction:row;
+            justify-content:center;
+            align-items:center;
+            z-index: 9;
+            position:fixed;
+            top: 0;
+            bottom:0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            overflow: auto;
+
+        }
+          .popup-overlay {
+            background:linear-gradient(to top right, rgba(255,255,255,.4) 0%, rgba(250,250,250,.5) 50%, rgba(119,119,119,.2) 100%);
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+   
+          }
+.popup-content {
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+}
+
+        .modalForm {
+            border: 2px solid black;
+            padding: 10px;
+            width: 30%;
+            height: 40vh;
+            display:flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items:center;
+            margin-top: 25vh;
+            background-color:rgba(199,199,199,0.9);
+
+            .formWrapper {
+                width: 100%;
+                height:100%;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items: center;
+                text-align:center;
+                
+                h1 {
+                    font-size: 4em;
+                    font-family: $primaryFont;
+                    font-weight:300;
+                }
+
+                h2 {
+                    font-size:1.5em;
+                    font-family:$secondaryFont;
+                    width:100%;
+                }
+
+
+
+                h2,
+                h1{
+                    width: 40%;
+
+                }
+            }
+        }
+
+        input[type='email'] {
+            margin: 5px;
+            padding: 5px;
+            width: 70%;
+
+            &::placeholder{
+                font-family:$primaryFont;
+                color:black;
+                text-transform:capitalize;
+                 font-size: 12px;
+            }
+        }
+
+        input[type='name'] {
+            margin: 5px;
+            padding: 5px;
+            width: 70%;
+
+             &::placeholder{
+                font-family:$primaryFont;
+                color:black;
+                text-transform:capitalize;
+                font-size: 12px;
+            }
+        }
+        input[type='submit'] {
+            margin: 5px;
+            padding:10px;
+            width: 65%;
+            font-family:$primaryFont;
+            color:black;
+            background-color:#f7f7f7;
+            text-transform:capitalize;
+            font-size: 14px;
+
+            &:hover {
+                background-color:#777;
+                color:#f7f7f7;
+            }
+
+        }
+
+        .hidden{
+            display: none;
+        }
+
+        .active {
+             width: 100vh;
+            height: 100vh;
+        }
+
+        .fa-times {
+            justify-self:flex-end;
+            align-self:flex-end;
+            font-size: 1.4em;
+
+            &:hover {
+                color: $color-grey-dark-1;
+            }
+        }
+
+        .zTest {
+            z-index: -1;
+        }
+
+.thankYouMessage {
+    font-size: 2em; 
+   font-family:$secondaryFont;
+   text-transform: uppercase;
+
+   p{
+       width: 70%;
+   }
+}
+
+
+
